@@ -3,13 +3,9 @@
 
 using namespace std;
 
-//Programmer: Amin Hasanzadeh
-//Date: September 29 2019
-//Purpose: Implement simple functionality to accrue total and monthly 
-//interest for an investment account
-//Re-submission description: 1- and (&&) operator is replaced by or (||)
-//in line 136. 
-//2- totalInterestAccrued is replaced by interestAccrued in line 156.  
+/*Programmer: A. H.
+Purpose: Implement simple functionality to accrue total and monthly 
+interest for an investment account*/
 
 //define constants
 const int FIRST_BALANCE_LIMIT = 1000;
