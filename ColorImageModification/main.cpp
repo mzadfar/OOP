@@ -2,10 +2,9 @@
 
 using namespace std;
 
-//Programmer: Amin Hasanzadeh
-//Date: October 5 2019
-//Purpose: develop three simple classes to represent and
-//utilize colors and images
+/*Programmer: Amin Hasanzadeh
+Purpose: develop three simple classes to represent and
+utilize colors and images*/
 
 int const MIN_ALLOWED_COLOR_VAL = 0;
 int const MAX_ALLOWED_COLOR_VAL = 1000;
