@@ -5,9 +5,8 @@ using namespace std;
 
 #include "ColorImageClass.h"
 
-//Programmer: Amin Hasanzadeh
-//Date: November 2 2019
-//Purpose: develop a program to modifying pictureson acomputer
+/*Programmer: A. H.
+Purpose: develop a program to modifying a picture */
 
 int main()
 {
