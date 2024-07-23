@@ -15,7 +15,7 @@ Folders startting 1 indicate data structure examples.
 * Color mification
 * Image modification
 
-### Object oriented programing
+### Fun programing
 Folders startting 2 indicate coding riddles examples.
 
 ## Getting Started
