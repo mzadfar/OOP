@@ -1,13 +1,22 @@
 # Object Oriented Programming
 
-The purpose of this repository is to start from practicing object oriented programming.
+The purpose of this repository is to start practicing object oriented programming.
 
 ## Description
 
 The following topics will be practised here:
+
+### Data structure
+Folders startting 0 indicate data structure examples.
+
+### Object oriented programing
+Folders startting 1 indicate data structure examples.
 * Investment account
 * Color mification
 * Image modification
+
+### Object oriented programing
+Folders startting 2 indicate coding riddles examples.
 
 ## Getting Started
 
