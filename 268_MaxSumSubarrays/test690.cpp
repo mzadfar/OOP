@@ -1,4 +1,4 @@
-// C++ program to print largest contiguous array sum
+// Print largest contiguous array sum
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -13,7 +13,6 @@ int maxSubArraySum(int a[], int size) {
   return ans;
 }
 
-/*Driver program to test maxSubArraySum*/
 int main() {
   int n;
   cout << "Enter the length of array: \n";

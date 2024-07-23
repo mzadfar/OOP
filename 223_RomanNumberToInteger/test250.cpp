@@ -1,5 +1,4 @@
-// C++ Program to convert Roman
-// Numerals to Numbers
+// Convert Roman Numerals to Numbers
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -7,7 +6,6 @@ using namespace std;
 // of a Roman symbol
 int romanToDecimal(string str);
 
-// Driver Code
 int main() {
   // Considering inputs given are valid
   string str = "MCMIV";

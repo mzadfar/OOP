@@ -1,5 +1,4 @@
-// C++ implementation to Divide two
-// integers without using multiplication,
+// Divide two integers without using multiplication,
 // division and mod operator
 #include <bits/stdc++.h>
 using namespace std;
@@ -38,7 +37,6 @@ long long divide(long long dividend, long long divisor) {
   return quotient;
 }
 
-// Driver code
 int main() {
   int a = -2147483648, b = -1;
   cout << divide(a, b) << "\n";

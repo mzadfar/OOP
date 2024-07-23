@@ -1,4 +1,4 @@
-// C++ program to find a triplet
+// Find a triplet
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -36,7 +36,6 @@ void find3Numbers(int A[], int arr_size, int sum) {
   // return false;
 }
 
-/* Driver program to test above function */
 int main() {
   int n;
   cout << "Enter the length of the array: \n";

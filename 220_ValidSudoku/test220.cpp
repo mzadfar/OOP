@@ -82,7 +82,6 @@ bool isValidConfig(char arr[][9], int n) {
   return true;
 }
 
-// Driver's code
 int main() {
   char board[9][9] = {{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
                       {'6', '.', '.', '1', '9', '5', '.', '.', '.'},

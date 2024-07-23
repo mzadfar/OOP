@@ -1,5 +1,4 @@
-// Iterative CPP program to convert a Binary
-// Tree to its mirror
+// Convert a Binary Tree to its mirror
 #include <bits/stdc++.h>
 using namespace std;
 

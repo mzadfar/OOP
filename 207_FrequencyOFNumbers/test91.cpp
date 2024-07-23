@@ -1,4 +1,3 @@
-/*Linked list: Balanced parantheses using stack*/
 #include <bits/stdc++.h>
 #include <iostream>
 #include <map>

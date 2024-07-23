@@ -1,4 +1,3 @@
-/*Linked list: Missing number*/
 #include <iostream>
 #include <stack>
 #include <string>

@@ -91,7 +91,6 @@ bool solveNQ() {
   return true;
 }
 
-// Driver program to test above function
 int main() {
   solveNQ();
   return 0;

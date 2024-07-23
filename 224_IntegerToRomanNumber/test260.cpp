@@ -1,5 +1,4 @@
-// C++ Program to convert decimal number to
-// roman numerals
+// Convert decimal number to roman numerals
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -20,7 +19,6 @@ void printRoman(int number) {
   cout << "\n";
 }
 
-// Driver program
 int main() {
   int number = 3549;
 

@@ -1,4 +1,3 @@
-/*Linked list: Similar numbers in 3 arrays*/
 #include <cstdio>
 #include <cstring>
 #include <iostream>

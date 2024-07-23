@@ -1,5 +1,4 @@
-// C++ program to convert a binary tree
-// to its mirror
+// Convert a binary tree to its mirror
 #include <bits/stdc++.h>
 using namespace std;
 

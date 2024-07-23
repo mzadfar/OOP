@@ -43,7 +43,6 @@ void radix_sort(int arr[], int n) {
   }
 }
 
-// driver code
 int main() {
   int arr[] = {825, 822, 31, 414, 5};
   int n = sizeof(arr) / sizeof(arr[0]);

@@ -1,4 +1,4 @@
-// C++ implementation to find the next higher number
+// Find the next higher number
 // using atmost one swap operation
 #include <bits/stdc++.h>
 
@@ -64,7 +64,6 @@ string nxtHighUsingAtMostOneSwap(string num) {
   return num;
 }
 
-// Driver program to test above
 int main() {
   string num = "218765";
   cout << "Original number: " << num << endl;

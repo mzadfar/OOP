@@ -1,4 +1,4 @@
-/*Linked list: Deleting a node in the linked list*/
+/*Linked list: Deleting a node from n position from the end of a linked list*/
 #include <stdio.h>
 #include <stdlib.h>
 

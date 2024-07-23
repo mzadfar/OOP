@@ -45,5 +45,3 @@ int main() {
   cout << integerToRoman(3549) << endl;
   return 0;
 }
-
-// This code is contributed by elviscastillo.

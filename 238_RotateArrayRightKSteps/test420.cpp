@@ -1,5 +1,4 @@
-// C++ implementation of right rotation
-// of an array K number of times
+// Right rotation of an array K number of times
 #include <bits/stdc++.h>
 using namespace std;
 

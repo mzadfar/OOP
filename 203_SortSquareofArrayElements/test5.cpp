@@ -1,4 +1,3 @@
-/*Linked list: Missing number*/
 #include <climits>
 #include <iostream>
 

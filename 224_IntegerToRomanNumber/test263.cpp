@@ -1,4 +1,3 @@
-// C++ Program for above approach
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -55,7 +54,6 @@ string intToRoman(int num) {
   return ans;
 }
 
-// Driver program to test above function
 int main() {
   int number = 3549;
   cout << intToRoman(number) << "\n";

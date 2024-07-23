@@ -38,7 +38,6 @@ string findKthPermutation(int n, int k) {
   return result[k - 1];
 }
 
-// Driver code
 int main() {
   int n = 3, k = 4;
 
