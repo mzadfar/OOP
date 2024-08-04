@@ -1,3 +1,14 @@
+/**
+ * @file test2.cpp
+ * @author A. H.
+ * @brief Intersection of 3 sorted arrays: Input: 3 sorted arrays
+ Output: a sorted array of common elements among 3 input arrays
+ * @version 0.1
+ * @date 2024-08-03
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
 #include <cstdio>
 #include <cstring>
 #include <iostream>

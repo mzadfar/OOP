@@ -1,3 +1,16 @@
+/**
+ * @file test4.cpp
+ * @author A. H.
+ * @brief Multiple number of max elements in an array by adding a constant
+ number to elements (stuff them candies in) Input: Length of array, array, and a
+ number to distribute Output: An array in which 1 indicats potential max and 0
+ indicates otherwise
+ * @version 0.1
+ * @date 2024-08-04
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
 #include <climits>
 #include <iostream>
 

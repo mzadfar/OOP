@@ -1,3 +1,15 @@
+/**
+ * @file test3.cpp
+ * @author A. H.
+ * @brief Find missing number:
+ Input: an array with n-1 length, and elements between 1 to n with one missing
+ number Output: the missing number
+ * @version 0.1
+ * @date 2024-08-03
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
 #include <iostream>
 #include <stack>
 #include <string>
