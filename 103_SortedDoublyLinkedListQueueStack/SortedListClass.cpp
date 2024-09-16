@@ -173,9 +173,9 @@ SortedListClass::SortedListClass(const SortedListClass &rhs) {
  already in the list, the newly inserted node will be placed AFTER
  the previously inserted nodes. */
 void SortedListClass::insertValue(const int &valToInsert) {
-  // paratmeter is the value to insert into the list
+  /* paratmeter is the value to insert into the list */
 
-  // list is empty then the only node up to now
+  /* list is empty then the only node up to now*/
   if (head == 0) {
     LinkedNodeClass *insertPtr;
     insertPtr = new LinkedNodeClass(0, valToInsert, 0);
@@ -183,31 +183,31 @@ void SortedListClass::insertValue(const int &valToInsert) {
     head = insertPtr;
     tail = insertPtr;
   } else {
-    // list is not empty thus compare
+    /* list is not empty thus compare */
     LinkedNodeClass *temp = head;
 
     while ((temp != 0) && (temp->getValue() <= valToInsert)) {
       temp = temp->getNext();
     }
 
-    // need to insert value before this temp point node
+    /* need to insert value before this temp point node */
     if (temp == head) {
-      // insert first position
+      /* insert first position */
       LinkedNodeClass *insertPtr;
       insertPtr = new LinkedNodeClass(0, valToInsert, head);
       insertPtr->setBeforeAndAfterPointers();
-      // update head and tail
+      /* update head and tail */
       head = insertPtr;
     } else if (temp == 0) {
-      // insert the last postion
+      /* insert the last postion */
       LinkedNodeClass *insertPtr;
       insertPtr = new LinkedNodeClass(tail, valToInsert, 0);
       insertPtr->setBeforeAndAfterPointers();
       tail = insertPtr;
     } else {
-      // insert in the middle position
-      // should insert before temp and after its previous node
-      // no need to change tail and head here
+      /* insert in the middle position */
+      /* should insert before temp and after its previous node */
+      /* no need to change tail and head here */
       LinkedNodeClass *insertPtr;
       insertPtr = new LinkedNodeClass(temp->getPrev(), valToInsert, temp);
       insertPtr->setBeforeAndAfterPointers();
