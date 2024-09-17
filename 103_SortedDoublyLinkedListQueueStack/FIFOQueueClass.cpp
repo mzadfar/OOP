@@ -1,9 +1,8 @@
-#include "FIFOQueueClass.h"
-#include "LinkedNodeClass.h"
 #include <iostream>
 
-
 using namespace std;
+
+#include "FIFOQueueClass.h"
 
 /* Default Constructor. Will properly initialize a queue to be an empty queue,
  * to which values can be added. */

@@ -1,6 +1,8 @@
 #ifndef _LIFOSTACK_CLASS_H_
 #define _LIFOSTACK_CLASS_H_
 
+#include "LinkedNodeClass.h"
+
 class LIFOStackClass {
 private:
   LinkedNodeClass *head; /* Points to the first node in a stack, or NULL if

@@ -1,6 +1,8 @@
 #ifndef _SORTEDLIST_CLASS_H_
 #define _SORTEDLIST_CLASS_H_
 
+#include "LinkedNodeClass.h"
+
 /* This class will store a doubly linked list in an always sorted way such that
  the user does not specify where in the list a value should be inserted but
  rather the new value is inserted correctly to maintain a sorted order */

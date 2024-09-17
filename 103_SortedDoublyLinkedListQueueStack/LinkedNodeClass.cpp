@@ -1,7 +1,8 @@
-#include "LinkedNodeClass.h"
 #include <iostream>
 
 using namespace std;
+
+#include "LinkedNodeClass.h"
 
 /* The ONLY constructor for the linked node class - it takes in the newly
  created node's information and assigns. */

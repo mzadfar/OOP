@@ -1,8 +1,8 @@
-#include "SortedListClass.h"
-#include "LinkedNodeClass.h"
 #include <iostream>
 
 using namespace std;
+
+#include "SortedListClass.h"
 
 /* Default Constructor. Will properly initialize a list to be an empty list, to
  * which values can be added. */
@@ -119,13 +119,14 @@ bool SortedListClass::removeLast(int &theVal) {
  returns true, and the reference parameter outVal will contain
  a copy of the value at that location. */
 bool SortedListClass::getElemAtIndex(const int index, int &outVal) const {
+  bool retVal = false;
   /* index out of range */
   if (index >= getNumElems()) {
     /* outVal remain unchanged */
-    return false;
+    retVal = false;
   } else if (index < 0) {
     /* index must start no less than zero */
-    return false;
+    retVal = false;
   } else {
     /* not out of range */
     int recordNum;
@@ -134,12 +135,13 @@ bool SortedListClass::getElemAtIndex(const int index, int &outVal) const {
     while (recordPtr != 0) {
       if (recordNum == index) {
         outVal = recordPtr->getValue();
-        return true;
+        retVal = true;
       }
       recordPtr = recordPtr->getNext();
       recordNum = recordNum + 1;
     }
   }
+  return retVal;
 }
 
 /* Copy constructor. Will make a complete (deep) copy of the list, such that one

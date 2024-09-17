@@ -1,8 +1,8 @@
-#include "LIFOStackClass.h"
-#include "LinkedNodeClass.h"
 #include <iostream>
 
 using namespace std;
+
+#include "LIFOStackClass.h"
 
 /* insert at the top and delete at the top
  push - one insert function

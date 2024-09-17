@@ -1,6 +1,8 @@
 #ifndef _FIFOQUEUE_CLASS_H_
 #define _FIFOQUEUE_CLASS_H_
 
+#include "LinkedNodeClass.h"
+
 class FIFOQueueClass {
 private:
   LinkedNodeClass *head; /* Points to the first node in a queue, or NULL, if
