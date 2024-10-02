@@ -1,5 +1,7 @@
 #include <iostream>
+
 using namespace std;
+
 #include "ValidInputCheck.h"
 
 void ValidInputCheck(double &parameter, int lowerBound) {

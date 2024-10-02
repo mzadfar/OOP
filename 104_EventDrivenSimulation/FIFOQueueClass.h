@@ -1,6 +1,8 @@
 ﻿#ifndef _FIFOQUEUE_CLASS_TEMPLATE_H_
 #define _FIFOQUEUE_CLASS_TEMPLATE_H_
 
+#include "LinkedNodeClass.h"
+
 template <class DT> class FIFOQueueClass {
 private:
   LinkedNodeClass<DT> *head; // Points to the first node in a queue, or NULL

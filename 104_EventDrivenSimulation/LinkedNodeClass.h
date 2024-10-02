@@ -2,6 +2,7 @@
 #define _LINKED_NODE_CLASS_TEMPLATE_H_
 
 template <class T>
+
 // The list node class will be the data type for individual nodes of
 // a doubly-linked data structure.
 class LinkedNodeClass {

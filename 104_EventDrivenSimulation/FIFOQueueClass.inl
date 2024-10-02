@@ -1,8 +1,9 @@
 ﻿#include <iostream>
+
 using namespace std;
+
 #include "FIFOQueueClass.h"
 #include "LinkedNodeClass.h"
-
 
 template <class DT>
 // Default Constructor. Will properly initialize a queue to

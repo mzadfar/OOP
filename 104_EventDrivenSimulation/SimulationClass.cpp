@@ -1,14 +1,10 @@
 #include <iostream>
-using namespace std;
-#include "Constants.h"
-#include "CustomerClass.h"
-#include "EventClass.h"
-#include "FIFOQueueClass.h"
-#include "LinkedNodeClass.h"
-#include "SimulationClass.h"
-#include "SortedListClass.h"
-#include "random.h"
 
+using namespace std;
+
+#include "Constants.h"
+#include "SimulationClass.h"
+#include "random.h"
 
 SimulationClass::SimulationClass(int close, int min, int max, double mean,
                                  double stdDev, double percent,
