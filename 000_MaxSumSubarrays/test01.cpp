@@ -1,19 +1,29 @@
-/* Maimum value of all possible subarrays
-Time complexity O(n^2)*/
+/**
+ * @file test01.cpp
+ * @author M. Z.
+ * @brief Maximum value of all possible subarrays
+ * @version 0.1
+ * @date 2025-02-13
+ *
+ * @copyright Copyright (c) 2025
+ *
+ */
+
 #include <climits>
 #include <iostream>
 
 using namespace std;
 
-int MaimumSumSubarray(int *arr, int n);
+int MaximumSumSubarray(int *arr, int n);
 
 int main() {
-  int arr[] = {3, -2, 5, -1};
-  cout << MaimumSumSubarray(arr, sizeof(arr) / sizeof(arr[0])) << "\n";
+  int arr[] = {3, -2, 5, -1, 4};
+  cout << "Maximum vaue of all subarrays is "
+       << MaximumSumSubarray(arr, sizeof(arr) / sizeof(arr[0])) << "\n";
   return 0;
 }
 
-int MaimumSumSubarray(int *arr, int n) {
+int MaximumSumSubarray(int *arr, int n) {
   int ans = INT_MIN, startIndex, subArraySize;
 
   for (startIndex = 0; startIndex < n; startIndex++) {
