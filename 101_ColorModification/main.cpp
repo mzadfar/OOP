@@ -1,6 +1,6 @@
 /**
  * @file main.cpp
- * @author A. H.
+ * @author M. Z.
  * @brief Image Pixels Operations Class Constructions: this project will be
 using the object-oriented property of encapsulation using C++ classes. To be
 more specific, some classes abount image pixels operations would be constructed

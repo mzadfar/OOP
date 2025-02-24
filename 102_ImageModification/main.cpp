@@ -1,6 +1,6 @@
 /**
  * @file main.cpp
- * @author A. H.
+ * @author M. Z.
  * @brief  Image Modification: This project will focus on the use of dynamic
 allocation of arrays and file input/output, as well as separating implementation
 into multiple files and some detecting & overcoming stream Input/Output issues.

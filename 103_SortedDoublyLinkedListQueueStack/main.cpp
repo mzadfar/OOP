@@ -1,6 +1,6 @@
 /**
  * @file project4_v2.cpp
- * @author your name (you@domain.com)
+ * @author M. Z.
  * @brief Sorted doubly-linked list, queue and stack: We will develop three
 common linked data structures, a sorted doubly-linked list, a simple queue, and
 a simple stack.

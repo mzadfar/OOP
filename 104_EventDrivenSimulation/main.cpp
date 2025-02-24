@@ -1,6 +1,6 @@
 /**
  * @file main.cpp
- * @author A. H.
+ * @author M. Z.
  * @brief Event Driven Simulation: Update some of the data structures and
 implement a small event-driven simulation of a fast food restaurant. The
 simulation will allow us to play “what if” games to see how a change could

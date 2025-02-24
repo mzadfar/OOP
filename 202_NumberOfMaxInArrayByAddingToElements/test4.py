@@ -1,6 +1,6 @@
 '''
  * @file test4.py
- * @author A. H.
+ * @author M. Z.
  * @brief Multiple number of max elements in an array by adding a constant
  number to elements (stuff them candies in) Input: Length of array, array, and a
  number to distribute Output: An array in which 1 indicats potential max and 0

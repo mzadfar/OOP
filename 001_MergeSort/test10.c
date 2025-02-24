@@ -1,17 +1,17 @@
 /**
- * @file test10.cpp
+ * @file test10.c
  * @author M. Z.
  * @brief Sort an array by splitting it into 2 arrays, and merge it back into 1
- * array
  * @version 0.1
  * @date 2025-02-18
  *
  * @copyright Copyright (c) 2025
  *
  */
-#include <iostream>
-
-using namespace std;
+#include <math.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 void Merge(int *arr, int *leftArr, int leftArrSize, int *rightArr,
            int rightArrSize);
@@ -23,17 +23,16 @@ int main() {
   int numberOfElement = sizeof(arr) / sizeof(arr[0]);
 
   MergeSort(arr, numberOfElement);
-  cout << "Sorted array: ";
+  printf("Sorted array: ");
   for (int i = 0; i < numberOfElement; i++) {
-    cout << arr[i] << " ";
+    printf("%d ", arr[i]);
   }
-  cout << "\n";
+  printf("\n");
 }
 
 void Merge(int *arr, int *leftArr, int leftArrSize, int *rightArr,
            int rightArrSize) {
-  int i, j, k;
-  i = j = k = 0;
+  int i = 0, j = 0, k = 0;
   while ((i < leftArrSize) && (j < rightArrSize)) {
     if (leftArr[i] < rightArr[j]) {
       arr[k++] = leftArr[i++];
@@ -57,19 +56,19 @@ void MergeSort(int *arr, int arrSize) {
 
   arrMidSize = arrSize / 2;
 
-  leftArr = new int[arrMidSize];
-  rightArr = new int[arrSize - arrMidSize];
+  leftArr = (int *)malloc(arrMidSize * sizeof(int));
+  rightArr = (int *)malloc((arrSize - arrMidSize) * sizeof(int));
 
   for (int i = 0; i < arrMidSize; i++) {
     leftArr[i] = arr[i];
   }
-  for (int i = arrMidSize; i < arrSize; i++) {
-    rightArr[i - arrMidSize] = arr[i];
+  for (int i = 0; i < (arrSize - arrMidSize); i++) {
+    rightArr[i] = arr[i + arrMidSize];
   }
 
   MergeSort(leftArr, arrMidSize);
   MergeSort(rightArr, arrSize - arrMidSize);
   Merge(arr, leftArr, arrMidSize, rightArr, arrSize - arrMidSize);
-  delete leftArr;
-  delete rightArr;
+  free(leftArr);
+  free(rightArr);
 }

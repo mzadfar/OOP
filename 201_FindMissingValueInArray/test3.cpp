@@ -1,6 +1,6 @@
 /**
  * @file test3.cpp
- * @author A. H.
+ * @author M. Z.
  * @brief Find missing number:
  Input: an array with n-1 length, and elements between 1 to n with one missing
  number Output: the missing number

@@ -1,6 +1,6 @@
 /**
  * @file main.cpp
- * @author A. H.
+ * @author M. Z.
  * @brief Bank Account Simulation: Implement functionality to accrue interest
 for an investment account.
  * @version 0.1

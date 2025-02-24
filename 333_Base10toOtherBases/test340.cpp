@@ -8,6 +8,7 @@
  * @copyright Copyright (c) 2025
  *
  */
+
 #include <cstdint>
 #include <iostream>
 #include <string>
@@ -19,6 +20,7 @@ using namespace std;
 #define BASE_16 16
 
 string convertBase(uint32_t numToConvert, uint8_t base);
+void reverseString(string &str);
 
 int main(void) {
   uint32_t numberToConvert = 60;
@@ -63,7 +65,18 @@ string convertBase(uint32_t numToConvert, uint8_t base) {
     convertedNum += '0';
   }
 
-  reverse(convertedNum.begin(), convertedNum.end());
+  reverseString(convertedNum);
 
   return convertedNum;
+}
+
+void reverseString(string &str) {
+  int start = 0;
+  int end = str.length() - 1;
+
+  while (start < end) {
+    swap(str[start], str[end]);
+    start++;
+    end--;
+  }
 }
