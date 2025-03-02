@@ -20,7 +20,7 @@ using namespace std;
 #define BASE_16 16
 
 string convertBase(uint32_t numToConvert, uint8_t base);
-void reverseString(string &str);
+void reverseString(string &inString);
 
 int main(void) {
   uint32_t numberToConvert = 60;
@@ -80,3 +80,13 @@ void reverseString(string &str) {
     end--;
   }
 }
+
+// string reverseString(string &inString) {
+//   int lenInString = size(inString);
+//   string outString;
+
+//   for (int32_t i = lenInString; i >= 0; i--) {
+//     outString += inString[i];
+//   }
+//   return outString;
+// }

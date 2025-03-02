@@ -1,75 +1,42 @@
-/**
- * @file test341.c
- * @author M.Z. 
- * @brief Converting base 10 decimal number to other bases
- * @version 0.1
- * @date 2025-02-15
- * 
- * @copyright Copyright (c) 2025
- * 
- */
+#include <memory.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#define BASE_2 2
-#define BASE_8 8
-#define BASE_16 16
-
-char *convertBase(uint32_t numToConvert, uint8_t base, char *pConvertedNum);
+char *decimalToOtherBases(uint32_t inValue, uint16_t toBase, char *outValue);
 
 int main(void) {
-  uint32_t numberToConvert = 60;
-
-  char *pConvertedNum;
-  pConvertedNum = malloc(33 * sizeof(char));
-
-  printf("%d in base %d is %s\n", numberToConvert, BASE_2,
-         convertBase(numberToConvert, BASE_2, pConvertedNum));
-
-  printf("%d in base %d is %s\n", numberToConvert, BASE_8,
-         convertBase(numberToConvert, BASE_8, pConvertedNum));
-
-  printf("%d in base %d is %s\n", numberToConvert, BASE_16,
-         convertBase(numberToConvert, BASE_16, pConvertedNum));
-
-  free(pConvertedNum);
-
+  uint32_t inValue = 60;
+  uint16_t toBase = 16;
+  char *outValue = (char *)malloc(33 * sizeof(char));
+  printf("Decimal value of %d is equal to %s in base %d\n", inValue,
+         decimalToOtherBases(inValue, toBase, outValue), toBase);
   return 0;
 }
 
-char *convertBase(uint32_t numToConvert, uint8_t base, char *pConvertedNum) {
-  //char buffer[33];
-  //char *pConvertedNum;
-  char allVlues[] = "0123456789ABCDEF";
+char *decimalToOtherBases(uint32_t inValue, uint16_t toBase, char *outValue) {
+  char allValues[] = "0123456789ABCDEF";
 
-  if (base < 2 || base > 16) {
-    printf("Enter a number between 2 and 16\n");
+  if ((toBase < 2) || (toBase > 16)) {
+    printf("Enter a value for base between 2 and 16, you entered %d\n", toBase);
     exit(1);
   }
 
-  /* point to last index on the character array to store NULL character*/
-  //pConvertedNum = &buffer[sizeof(buffer) - 1];
-  pConvertedNum[32] = '\0';
+  outValue[32] = '\0';
 
   do {
-    int value = numToConvert % base;
-    pConvertedNum -= 1;
+    outValue--;
+    uint16_t remVAlue = inValue % toBase;
+    *outValue = allValues[remVAlue];
+    inValue /= toBase;
+  } while (inValue != 0);
 
-    *pConvertedNum = allVlues[value]; //'0' + value;
-
-    numToConvert /= base;
-
-  } while (numToConvert != 0);
-
-  if (base == BASE_16) {
-    pConvertedNum -= 1;
-    *pConvertedNum = 'x';
-    pConvertedNum -= 1;
-    *pConvertedNum = '0';
+  if (toBase == 16) {
+    outValue--;
+    *outValue = 'x';
+    outValue--;
+    *outValue = '0';
   }
-
-  // printf("%s", pConvertedNum);
-
-  return pConvertedNum;
+  return outValue;
 }
