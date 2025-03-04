@@ -1,13 +1,14 @@
 /**
- * @file test30.c
+ * @file test40.c
  * @author M. Z.
- * @brief Inserting a node in the linked list
+ * @brief Deleting a node in the linked list
  * @version 0.1
  * @date 2025-03-03
  *
  * @copyright Copyright (c) 2025
  *
  */
+#include <memory.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,15 +22,21 @@ Node *head;
 
 void insertNodeInList(int data, int position);
 void printList(void);
+void deleteNodeInList(int position);
 
 int main(void) {
-  head = NULL;
+  head = NULL; /*Empty list*/
   insertNodeInList(9, 1);
   insertNodeInList(8, 2);
   insertNodeInList(7, 3);
   insertNodeInList(6, 4);
   insertNodeInList(5, 5);
   insertNodeInList(4, 6);
+  printList();
+  int position;
+  printf("Enter a position: \n");
+  scanf("%d", &position);
+  deleteNodeInList(position);
   printList();
   return 0;
 }
@@ -45,9 +52,8 @@ void insertNodeInList(int data, int position) {
   Node *temp2 = (Node *)malloc(sizeof(Node));
   temp2 = head;
   for (int i = 0; i < (position - 2);
-       i++) { // (position = 3) means the first swap
+       i++) { // i = 0 (position = 3) means the second swap after head
     temp2 = temp2->next;
-    printf("%d \n", i);
   }
   temp1->next = temp2->next; // for position =2 temp1->next = head->next
   temp2->next = temp1;       // for position =2 head->next = temp1
@@ -61,4 +67,21 @@ void printList(void) {
     temp = temp->next;
   }
   printf("\n");
+}
+
+void deleteNodeInList(int position) {
+  Node *temp1 = head;
+  if (1 == position) {
+    temp1 = temp1->next;
+    head = temp1;
+    return;
+  } else {
+    for (int i = 0; i < position - 2;
+         i++) { // (position = 3) means the first swap
+      temp1 = temp1->next;
+    }
+    /*temp1 points to (position-1)th node*/
+    Node *temp2 = temp1->next; /*temp2 at position node*/
+    temp1->next = temp2->next; /*(position + 1) node*/
+  }
 }

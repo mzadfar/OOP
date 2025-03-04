@@ -1,5 +1,5 @@
 /**
- * @file test30.cpp
+ * @file test31.cpp
  * @author M. Z.
  * @brief Inserting a node in the linked list
  * @version 0.1
@@ -39,7 +39,7 @@ public:
     }
     Node *temp2 = head;
     for (int i = 0; i < position - 2;
-         i++) { // i = 0 (position = 3) means the second swap after head
+         i++) { // (position = 3) means the first swap
       temp2 = temp2->next;
     }
     temp1->next = temp2->next; // for position =2 temp1->next = head->next

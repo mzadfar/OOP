@@ -1,3 +1,12 @@
+'''
+ * @file test30.py
+ * @author M. Z.
+ * @brief Inserting a node in the linked list
+ * array
+ * @date 2025-03-03
+ *
+ * @copyright Copyright (c) 2025
+'''
 import sys
 
 def Node(data, next):
@@ -7,10 +16,10 @@ def insertNodeInList(head, data, position):
     temp1 = Node(data, None)
     if (1 == position):
         temp1[1] = head
-        return temp1
+        head = temp1
     else:
         temp2 = head
-        for i in range(1,position -1):
+        for i in range(0,position -2):
            temp2 = temp2[1]
         temp1[1] = temp2[1]
         temp2[1] = temp1

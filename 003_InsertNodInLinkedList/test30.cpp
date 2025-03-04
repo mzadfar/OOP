@@ -32,20 +32,22 @@ int main() {
 }
 
 void insertNodeInList(int data, int position) {
-  Node *temp1 = new Node();
+  Node *temp1 = new Node;
   temp1->data = data; // Similar to (*temp).data = x;
   if (position == 1) {
     temp1->next = head;
     head = temp1;
-    return;
+    // return;
+  } else {
+    Node *temp2 = new Node;
+    temp2 = head;
+    for (int i = 0; i < position - 2;
+         i++) { // (position = 3) means the first swap
+      temp2 = temp2->next;
+    }
+    temp1->next = temp2->next; // for position =2 temp1->next = head->next
+    temp2->next = temp1;       // for position =2 head->next = temp1
   }
-  Node *temp2 = head;
-  for (int i = 0; i < position - 2;
-       i++) { // i = 0 (position = 3) means the second swap after head
-    temp2 = temp2->next;
-  }
-  temp1->next = temp2->next; // for position =2 temp1->next = head->next
-  temp2->next = temp1;       // for position =2 head->next = temp1
 }
 
 void printList() {
