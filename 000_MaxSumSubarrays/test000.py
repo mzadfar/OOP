@@ -1,5 +1,5 @@
 '''
- * @file test01.py
+ * @file test000.py
  * @author M. Z.
  * @brief Maximum value of all subarrays:Time complexity O(n^2)
  * @version 0.1
@@ -10,12 +10,13 @@
 
 def MaximumSumSubarray(arr, sizeArr):
     ret= -float('inf')
-    for startIndex in range(0, sizeArr):
-        sum = 0
-        for subArrSize in range(1, sizeArr+1):
-            if ((subArrSize + startIndex) > sizeArr):
+    for subArrSize in range(1, sizeArr + 1):
+        for startIndex in range(0, sizeArr):
+            if (startIndex + subArrSize) > sizeArr:
                 break
-            sum += arr[startIndex + subArrSize -1]
+            sum = 0
+            for i in range (0, startIndex + subArrSize):
+                sum += arr[i]
             ret = sum if (sum > ret) else ret
     return ret
 

@@ -1,5 +1,5 @@
 /**
- * @file test00.cpp
+ * @file test000.cpp
  * @author M. Z.
  * @brief Maximum value of all possible subarrays; Time complexity O(n^2)
  * @version 0.1

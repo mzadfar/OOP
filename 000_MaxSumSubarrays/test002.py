@@ -1,5 +1,5 @@
 '''
- * @file test02.py
+ * @file test002.py
  * @author M. Z.
  * @brief Maximum value of all subarrays
  * @version 0.1

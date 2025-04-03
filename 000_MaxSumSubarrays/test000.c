@@ -1,5 +1,5 @@
 /**
- * @file test01.c
+ * @file test000.c
  * @author M. Z.
  * @brief Maximum value of all subarrays:Time complexity O(n^2)
  * @version 0.1
@@ -27,13 +27,15 @@ int main(void) {
 int MaximumSumSubarray(int *arr, int sizeArr) {
   int ret = INT_MIN, sum, startIndex, subArrSize;
 
-  for (startIndex = 0; startIndex < sizeArr; startIndex++) {
-    sum = 0;
-    for (subArrSize = 1; subArrSize <= sizeArr; subArrSize++) {
+  for (subArrSize = 1; subArrSize <= sizeArr; subArrSize++) {
+    for (startIndex = 0; startIndex < sizeArr; startIndex++) {
       if ((startIndex + subArrSize) > sizeArr) {
         break;
       }
-      sum += arr[startIndex + subArrSize - 1];
+      sum = 0;
+      for (int i = 0; i < (startIndex + subArrSize); i++) {
+        sum += arr[i];
+      }
       ret = sum > ret ? sum : ret;
     }
   }

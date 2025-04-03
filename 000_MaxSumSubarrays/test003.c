@@ -1,5 +1,5 @@
 /**
- * @file test03.c
+ * @file test003.c
  * @author M. Z.
  * @brief Maximum value of all subarrays
  * @version 0.1
