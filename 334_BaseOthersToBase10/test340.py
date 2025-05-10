@@ -1,10 +1,11 @@
+import sys 
 
 def convertToDecimal(numToConvert, baseFrom, sizeOfNum):
     toThePowerOf = 0
     ret = 0
     for iChar in numToConvert[::-1]:
         if (iChar.isalpha()): # do not forget () 
-            charCode = ord(iChar.lower()) - 'a' + 10 # do not forget () 
+            charCode = ord(iChar.lower()) - ord('a') + 10 # do not forget () 
             ret += charCode * pow(baseFrom, toThePowerOf)
         else:
             ret += int(iChar) * pow(baseFrom, toThePowerOf)
@@ -22,3 +23,40 @@ print("%s in base %d equals %d in base 10" % (numberToConvert, BASE_8, convertTo
 numberToConvert = "3C"
 BASE_16 = 16
 print("%s in base %d equals %d in base 10" % (numberToConvert, BASE_16, convertToDecimal(numberToConvert, BASE_16, len(numberToConvert))))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

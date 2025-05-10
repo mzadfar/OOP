@@ -6,10 +6,16 @@ def convertBase(numToConvert, base):
         sys.exit(1)
     ret = ""
     allValues = "0123456789ABCDEF"
+    
     while numToConvert !=0:
         value = numToConvert % base
         ret += allValues[value]#str(value)
         numToConvert //= base
+    
+    if (16 == toBase):
+        convertedValue += 'x'
+        convertedValue += '0'    
+    
     return ret[::-1]
 
 numberToConvert = 60

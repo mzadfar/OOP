@@ -39,7 +39,7 @@ int main(void) {
 
 string convertBase(uint32_t numToConvert, uint8_t base) {
   string convertedNum = "";
-  // char allVlues[] = "0123456789ABCDEF";
+  string allValues = "0123456789ABCDEF";
 
   if (base < 2 || base > 16) {
     printf("Enter a number between 2 and 16\n");
@@ -47,15 +47,7 @@ string convertBase(uint32_t numToConvert, uint8_t base) {
   }
 
   do {
-    int value = numToConvert % base;
-    char digit;
-    if (value < 10) {
-      digit = value + '0';
-    } else {
-      digit = value - 10 + 'A';
-    }
-
-    convertedNum += digit;
+    convertedNum += allValues[numToConvert % base];
     numToConvert /= base;
 
   } while (numToConvert != 0);
@@ -66,20 +58,31 @@ string convertBase(uint32_t numToConvert, uint8_t base) {
   }
 
   reverseString(convertedNum);
-
+  
   return convertedNum;
 }
 
-void reverseString(string &str) {
-  int start = 0;
-  int end = str.length() - 1;
-
-  while (start < end) {
-    swap(str[start], str[end]);
-    start++;
-    end--;
+void reverseString(string &convertedValue) {
+  uint32_t stringStart = 0, stringEnd = convertedValue.length() - 1;
+  while (stringStart < stringEnd) {
+    char temp = convertedValue[stringStart];
+    convertedValue[stringStart] = convertedValue[stringEnd];
+    convertedValue[stringEnd] = temp;
+    stringStart++;
+    stringEnd--;
   }
 }
+
+// void reverseString(string &str) {
+//   int start = 0;
+//   int end = str.length() - 1;
+
+//   while (start < end) {
+//     swap(str[start], str[end]);
+//     start++;
+//     end--;
+//   }
+// }
 
 // string reverseString(string &inString) {
 //   int lenInString = size(inString);

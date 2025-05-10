@@ -38,7 +38,6 @@ int main(void) {
 
 string convertBase(uint32_t numToConvert, uint8_t base) {
   string convertedNum = "";
-  char allVlues[] = "0123456789ABCDEF";
 
   if (base < 2 || base > 16) {
     printf("Enter a number between 2 and 16\n");
@@ -47,8 +46,16 @@ string convertBase(uint32_t numToConvert, uint8_t base) {
 
   do {
     int value = numToConvert % base;
-    convertedNum += allVlues[value] ;
+    char digit;
+    if (value < 10) {
+      digit = value + '0';
+    } else {
+      digit = value - 10 + 'A';
+    }
+
+    convertedNum += digit;
     numToConvert /= base;
+
   } while (numToConvert != 0);
 
   if (base == BASE_16) {

@@ -1,5 +1,5 @@
 /**
- * @file test2.cpp
+ * @file test000.cpp
  * @author M. Z.
  * @brief Intersection of 3 sorted arrays: Input: 3 sorted arrays
  Output: a sorted array of common elements among 3 input arrays
