@@ -1,9 +1,9 @@
 /**
- * @file test021.cpp
+ * @file test024.cpp
  * @author M. Z.
  * @brief Inserting a node at the beginning of a linked list
  * @version 0.1
- * @date 2025-02-19
+ * @date 2025-02-20
  *
  * @copyright Copyright (c) 2025
  *
@@ -12,42 +12,50 @@
 
 using namespace std;
 
-typedef struct Node {
-  int data; // char data;
+class Node {
+public:
+  int data;
   Node *next;
-} Node;
 
-Node *insertNodeAtBegining(Node *head, int beginingNode);
-void printList(Node *head);
+  Node(int data) {
+    this->data = data;
+    this->next = nullptr;
+  }
+};
+
+class LinkedList {
+public:
+  Node *head;
+
+  LinkedList() { this->head = nullptr; }
+
+  Node *insertNodeAtBeginning(Node *head, int data) {
+    Node *temp = new Node(data);
+    temp->next = head;
+    head = temp;
+    return head;
+  }
+
+  void printList(Node *head) {
+    cout << "The list is: ";
+    while (head != nullptr) {
+      cout << " " << head->data;
+      head = head->next;
+    }
+    cout << endl;
+  }
+};
 
 int main() {
-  Node *head = nullptr; /*Empty list*/
+  LinkedList myList;
   cout << ("How many node in the linked list? ") << endl;
   int numOfNodes, beginingNode;
   cin >> numOfNodes;
   for (int i = 0; i < numOfNodes; i++) {
-    cout << "Enter a number as node " << endl;
+    cout << "Enter a number as node: ";
     cin >> beginingNode;
-    head = insertNodeAtBegining(head, beginingNode);
-    printList(head);
+    myList.head = myList.insertNodeAtBeginning(myList.head, beginingNode);
+    myList.printList(myList.head);
   }
-}
-
-Node *insertNodeAtBegining(Node *head, int beginingNode) {
-  Node *temp = new Node;
-  temp->data = beginingNode; 
-  temp->next = head;
-  head = temp;
-  // delete temp;    // Deallocate memory when done
-  // temp = nullptr; // Good practice to avoid dangling pointers
-  return head;
-}
-
-void printList(Node *head) {
-  cout << "The list is: ";
-  while (head != nullptr) {
-    cout << " " << head->data;
-    head = head->next;
-  }
-  cout << endl;
+  return 0;
 }

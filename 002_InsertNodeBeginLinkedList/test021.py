@@ -19,7 +19,7 @@ class LinkedList:
         self.head = None
 
     def insertNodeAtBegining(self, beginingNode):
-        new_node = Node(beginingNode)
+        new_node = Node(beginingNode,self.head)
         new_node.next = self.head
         self.head = new_node
 

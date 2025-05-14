@@ -1,5 +1,5 @@
 /**
- * @file test020.cpp
+ * @file test023.cpp
  * @author M. Z.
  * @brief Inserting a node at the beginning of a linked list
  * @version 0.1
@@ -12,45 +12,50 @@
 
 using namespace std;
 
-typedef struct Node {
-  int data; // char data;
+class Node {
+public:
+  int data;
   Node *next;
-} Node;
 
-Node *head; /*Global variable, can be accessed anywhere*/
+  Node(int data) {
+    this->data = data;
+    this->next = nullptr;
+  }
+};
 
-void insertNodeAtBegining(int beginingNode);
-void printList();
+class LinkedList {
+public:
+  Node *head;
+
+  LinkedList() { this->head = nullptr; }
+
+  void insertNodeAtBegining(int data) {
+    Node *temp = new Node(data);
+    temp->next = head;
+    head = temp;
+  }
+
+  void printList() {
+    Node *temp = head;
+    cout << "The list is: ";
+    while (temp != nullptr) {
+      cout << " " << temp->data;
+      temp = temp->next;
+    }
+    cout << endl;
+  }
+};
 
 int main() {
-  head = nullptr; /*Empty list*/
+  LinkedList myList;
   cout << ("How many node in the linked list? ") << endl;
   int numOfNodes, beginingNode;
   cin >> numOfNodes;
   for (int i = 0; i < numOfNodes; i++) {
-    cout << "Enter a number as node " << endl;
+    cout << "Enter a number as node: ";
     cin >> beginingNode;
-    insertNodeAtBegining(beginingNode);
-    printList();
+    myList.insertNodeAtBegining(beginingNode);
+    myList.printList();
   }
   return 0;
-}
-
-void insertNodeAtBegining(int beginingNode) {
-  Node *temp = new Node;
-  temp->data = beginingNode; 
-  temp->next = head;
-  head = temp;
-  // delete temp;    // Deallocate memory when done
-  // temp = nullptr; // Good practice to avoid dangling pointers
-}
-
-void printList() {
-  Node *temp = head;
-  cout << "The list is: ";
-  while (temp != nullptr) {
-    cout << " " << temp->data;
-    temp = temp->next;
-  }
-  cout << endl;
 }
