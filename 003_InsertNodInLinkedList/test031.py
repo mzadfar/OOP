@@ -22,7 +22,7 @@ class LinkedList:
         temp1 = Node(data)
         if (1 == position):
             temp1.next = self.head
-            return temp1
+            self.head = temp1
         else:
             temp2 = self.head
             for i  in range(1, position -1):
