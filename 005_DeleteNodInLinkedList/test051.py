@@ -1,5 +1,5 @@
 '''
- * @file test41.py
+ * @file test051.py
  * @author M. Z.
  * @brief Deleting a node in the linked list
  * array

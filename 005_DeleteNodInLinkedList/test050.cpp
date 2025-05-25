@@ -1,7 +1,7 @@
 /**
- * @file test41.cpp
- * @author your name (you@domain.com)
- * @brief
+ * @file test050.cpp
+ * @author M. Z.
+ * @brief Deleting a node in the linked list
  * @version 0.1
  * @date 2025-03-04
  *

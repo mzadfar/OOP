@@ -1,5 +1,5 @@
 /**
- * @file test30.c
+ * @file test030.c
  * @author M. Z.
  * @brief Inserting a node in the linked list
  * @version 0.1

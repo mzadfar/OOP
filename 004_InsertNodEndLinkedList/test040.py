@@ -1,7 +1,7 @@
 '''
- * @file test030.py
+ * @file test040.py
  * @author M. Z.
- * @brief Inserting a node in the linked list
+ * @brief Inserting a node at the end of a linked list
  * array
  * @date 2025-03-03
  *
@@ -12,16 +12,14 @@ import sys
 def Node(data, next):
     return [data, next]
 
-def insertNodeInList(head, data, position):
-    temp1 = Node(data, None)
-    if (1 == position):
-        temp1[1] = head
+def insertNodeAtEndOfList(head, data):
+    temp1 = Node(data, None) #temp1[0] = data, temp1[1] = next
+    if (head == None):
         head = temp1
     else:
         temp2 = head
-        for i in range(0,position -2):
+        while (temp2[1] != None):
            temp2 = temp2[1]
-        temp1[1] = temp2[1]
         temp2[1] = temp1
     return head
 
@@ -34,11 +32,11 @@ def printList():
   print() #newline
     
 head = None  # Empty linked list
-head = insertNodeInList(head, 9,1)
-head = insertNodeInList(head, 8,2)
-head = insertNodeInList(head, 7,3)
-head = insertNodeInList(head, 6,4)
-head = insertNodeInList(head, 5,5)
+head = insertNodeAtEndOfList(head, 9)
+head = insertNodeAtEndOfList(head, 8)
+head = insertNodeAtEndOfList(head, 7)
+head = insertNodeAtEndOfList(head, 6)
+head = insertNodeAtEndOfList(head, 5)
 printList()
 
 

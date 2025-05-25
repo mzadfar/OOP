@@ -1,5 +1,5 @@
 /**
- * @file test40.c
+ * @file test050.c
  * @author M. Z.
  * @brief Deleting a node in the linked list
  * @version 0.1

@@ -1,7 +1,7 @@
 '''
- * @file test031.py
+ * @file test041.py
  * @author M. Z.
- * @brief Inserting a node in the linked list
+ * @brief Inserting a node at the end of a linked list
  * array
  * @date 2025-03-03
  *
@@ -10,24 +10,22 @@
 import sys
 
 class Node:
-    def __init__(self, data):
+    def __init__(self, data, next):
         self.data = data
-        self.next = None
+        self.next = next
 
 class LinkedList:
     def __init__(self):
         self.head = None
 
-    def insertNodeInList(self, data, position):
-        temp1 = Node(data)
-        if (1 == position):
-            temp1.next = self.head
-            self.head = temp1
+    def insertNodeAtEndOfList(self, data):
+        temp1 = Node(data, None)
+        if (self.head == None):
+            self.head= temp1
         else:
             temp2 = self.head
-            for i  in range(1, position -1):
+            while (temp2.next != None):
                 temp2 = temp2.next
-            temp1.next = temp2.next
             temp2.next = temp1
         return self.head
 
@@ -40,9 +38,9 @@ class LinkedList:
         print() #newline
     
 LL = LinkedList()  # Empty linked list
-LL.head = LL.insertNodeInList(9,1)
-LL.head = LL.insertNodeInList(8,2)
-LL.head = LL.insertNodeInList(7,3)
-LL.head = LL.insertNodeInList(6,4)
-LL.head = LL.insertNodeInList(5,5)
+LL.head = LL.insertNodeAtEndOfList(9)
+LL.head = LL.insertNodeAtEndOfList(8)
+LL.head = LL.insertNodeAtEndOfList(7)
+LL.head = LL.insertNodeAtEndOfList(6)
+LL.head = LL.insertNodeAtEndOfList(5)
 LL.printList()           

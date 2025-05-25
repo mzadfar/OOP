@@ -1,14 +1,13 @@
 /**
- * @file test031.cpp
+ * @file test040.cpp
  * @author M. Z.
- * @brief Inserting a node in the linked list
+ * @brief Inserting a node at the end of a linked list
  * @version 0.1
  * @date 2025-03-03
  *
  * @copyright Copyright (c) 2025
  *
  */
-#include <cstddef>
 #include <iostream>
 
 using namespace std;
@@ -30,20 +29,19 @@ public:
   
   LinkedList() { this->head = nullptr; }
 
-  void insertNodeInList(int data, int position) {
+  void insertNodeAtEndOfList(int data) {
     Node *temp1 = new Node(data);
-    if (position == 1) {
-      temp1->next = head;
+    temp1->data = data;
+    temp1->next= nullptr;
+    if (head == nullptr) {
       head = temp1;
-      return;
-    }
+    }else{
     Node *temp2 = head;
-    for (int i = 0; i < position - 2;
-         i++) { // (position = 3) means the first swap
+    while (temp2->next != nullptr) { // (position = 3) means the first swap
       temp2 = temp2->next;
     }
-    temp1->next = temp2->next; // for position =2 temp1->next = head->next
-    temp2->next = temp1;       // for position =2 head->next = temp1
+    temp2->next = temp1;      
+  }
   }
 
   void printList() {
@@ -59,9 +57,9 @@ public:
 
 int main() {
   LinkedList LL;
-  LL.insertNodeInList(2, 1);
-  LL.insertNodeInList(3, 2);
-  LL.insertNodeInList(4, 1);
-  LL.insertNodeInList(5, 2);
+  LL.insertNodeAtEndOfList(2);
+  LL.insertNodeAtEndOfList(3);
+  LL.insertNodeAtEndOfList(4);
+  LL.insertNodeAtEndOfList(5);
   LL.printList();
 }
